@@ -1,0 +1,34 @@
+{
+  "name": "node-express-service-starter",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node ./dist/server.js",
+    "build": "pnpm clean && tsc --build",
+    "dev": "tsc --init",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "connect-rid": "^0.0.1",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.6",
+    "debug": "~2.6.9",
+    "dotenv": "^17.4.2",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pino": "^10.3.1",
+    "pino-http": "^11.0.0",
+    "rid": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3"
+  }
+}
