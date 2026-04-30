@@ -1,21 +1,17 @@
-import { type Response } from "express";
-
+import { type Response } from 'express';
 
 export class ResponseEntity {
-
-    private statusCode: Number;
+    private statusCode: number;
     private body: Record<string, any> | undefined;
     private headers: Record<string, string> | undefined;
 
-    constructor(statusCode: Number, body?: Record<string, any>, headers?: Record<string, string>) {
+    constructor(statusCode: number, body?: Record<string, any>, headers?: Record<string, string>) {
         this.statusCode = statusCode;
         this.body = body;
         this.headers = headers;
     }
 
-    public static ok(res: Response, body?: Record<string, any>, headers?: Record<string, string>) {
-        res.status(200);
-        res.send("ok");
+    public static ok(res: Response, body?: Record<string, unknown>) {
+        res.status(200).json(body);
     }
-
 }

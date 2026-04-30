@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node ./dist/server.js",
     "build": "pnpm clean && tsc --build",
-    "dev": "tsc --init",
+    "dev": "nodemon --exec tsx ./src/server.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write",
     "clean": "rm -rf ./dist"
   },
   "dependencies": {
@@ -20,15 +23,25 @@
     "morgan": "~1.9.1",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
+    "redis": "^5.12.1",
     "rid": "^0.0.1"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@tsconfig/node24": "^24.0.4",
     "@types/cookie-parser": "^1.4.10",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/morgan": "^1.9.10",
     "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "jiti": "^2.6.1",
+    "nodemon": "^3.1.14",
+    "prettier": "3.8.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
   }
 }
